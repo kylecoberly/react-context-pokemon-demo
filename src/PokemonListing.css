@@ -1,0 +1,23 @@
+.PokemonListing {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+}
+
+.PokemonListing img {
+  width: 100%;
+}
+
+.PokemonListing h2 {
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.PokemonListing ul {
+  list-style: disc;
+  margin-left: 16px;
+}
+
+.PokemonListing .fa-tractor {
+  color: hsl(0, 0%, 65%);
+  margin-right: 12px;
+}

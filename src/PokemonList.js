@@ -8,9 +8,9 @@ function PokemonList() {
 
   return (
     <ul className="PokemonList">
-      {pokemonList.map(({ name }) => (
-        <li key={name}>
-          <PokemonListing name={name} />
+      {pokemonList.map(pokemon => (
+        <li key={pokemon.name}>
+          <PokemonListing pokemon={pokemon} />
         </li>
       ))}
     </ul>

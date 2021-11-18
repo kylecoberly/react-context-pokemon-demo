@@ -6,7 +6,7 @@
 
 .PokemonList > li {
   border: 0.5px solid hsl(0, 0%, 70%);
-  padding: 36px;
+  padding: 16px;
   margin-bottom: 36px;
   width: 300px;
   border-radius: 2px;

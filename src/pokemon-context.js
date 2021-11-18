@@ -10,7 +10,13 @@ export const PokemonProvider = ({ children }) => {
     fetch("https://pokeapi.co/api/v2/pokemon?limit=1200")
       .then(response => response.json())
       .then(pokemonList => {
-        setPokemonList(pokemonList.results)
+        const urls = pokemonList.results.map(pokemon => pokemon.url)
+        const pendingPokemon = urls.map(url => fetch(url).then(response => response.json()))
+        Promise.all(pendingPokemon)
+          .then(pokemon => {
+            console.log(pokemon)
+            setPokemonList(pokemon)
+          })
       })
   }, [])
 
